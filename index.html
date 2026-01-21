@@ -4,96 +4,136 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Service Auto Mașini Rulate Brad | Reparații Auto, Vulcanizare</title>
-  <meta name="description" content="Service auto în Brad – reparații auto profesionale, vulcanizare, spălătorie auto și vânzare mașini rulate. Telefon 0732802654.">
+  <title>Service Auto Mașini Rulate Brad</title>
+  <meta name="description" content="Service auto Brad – reparații auto, vulcanizare, spălătorie auto și vânzare mașini rulate. Telefon 0732802654">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #f5f7fa, #e3e9f0);
-      color: #333;
+      background: linear-gradient(180deg, #eaf2fb, #d6e4f5);
+      color: #1f2d3d;
     }
+
     header {
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      background: linear-gradient(180deg, #1f5fbf, #2a74d9);
       color: white;
-      padding: 40px 20px;
+      padding: 60px 20px 50px;
       text-align: center;
     }
-    header img {
-      max-width: 220px;
-      margin-bottom: 15px;
-      animation: fadeInDown 1s ease;
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
     }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+      opacity: 0.95;
+    }
+
+    .status {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
     section {
       padding: 40px 20px;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
       max-width: 1100px;
       margin: auto;
     }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      padding: 16px 26px;
+      border-radius: 12px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+
+    .call { background: #2ecc71; }
+    .whatsapp { background: #25D366; }
+    .facebook { background: #1877f2; }
+    .maps { background: #e53935; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
     .card {
       background: white;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      font-weight: bold;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-    .status {
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
       font-size: 18px;
       font-weight: bold;
-      margin-top: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
     }
-    .cta {
-      margin-top: 20px;
-    }
-    .cta a {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 25px;
-      border-radius: 50px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-    }
-    .call { background: #e53935; }
-    .fb { background: #1877f2; }
-    .map { background: #43a047; }
 
-    .whatsapp {
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .reviews, .faq {
+      margin-top: 50px;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .review {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 12px 0;
+    }
+
+    .review:last-child { border-bottom: none; }
+
+    footer {
+      background: #1f5fbf;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background: #25D366;
       color: white;
-      padding: 15px 22px;
+      padding: 16px 24px;
       border-radius: 50px;
       font-weight: bold;
       text-decoration: none;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       animation: pulse 2s infinite;
-      z-index: 1000;
+      z-index: 999;
     }
-    footer {
-      background: #1e3c72;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+
     @keyframes pulse {
       0% { transform: scale(1); }
       50% { transform: scale(1.05); }
@@ -104,31 +144,45 @@
 <body>
 
 <header>
-  <img src="logo.png" alt="Service Auto Mașini Rulate Brad">
   <h1>Service Auto Mașini Rulate Brad</h1>
-  <p>Reparații auto profesionale • Brad</p>
+  <p>Ai o problemă cu mașina? Sună-ne și te ajutăm rapid.</p>
   <div class="status" id="status">⏳ Se verifică programul...</div>
 </header>
 
 <section>
-  <div class="services">
+  <div class="buttons">
+    <a href="tel:0732802654" class="btn call">📞 Sună acum</a>
+    <a href="https://wa.me/40732802654" target="_blank" class="btn whatsapp">💬 WhatsApp</a>
+    <a href="https://www.facebook.com/profile.php?id=61586676792745" target="_blank" class="btn facebook">📘 Facebook</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Strada+Vânătorilor+Brad" target="_blank" class="btn maps">📍 Navighează</a>
+  </div>
+
+  <div class="cards">
     <div class="card">🔧 Reparații auto profesionale</div>
-    <div class="card">🛞 Vulcanizare auto</div>
+    <div class="card">🛞 Vulcanizare</div>
     <div class="card">🚿 Spălătorie auto</div>
     <div class="card">🚗 Vânzare mașini rulate</div>
   </div>
 
-  <div class="cta" style="text-align:center;">
-    <a href="tel:0732802654" class="call">📞 Sună acum</a>
-    <a href="https://www.facebook.com/profile.php?id=61586676792745" class="fb" target="_blank">📘 Facebook</a>
-    <a href="https://www.google.com/maps/search/?api=1&query=Strada+Vânătorilor+Brad" class="map" target="_blank">📍 Locație</a>
+  <div class="reviews">
+    <h2>Ce spun clienții:</h2>
+    <div class="review"><span>Foarte mulțumit de servicii</span><span>⭐⭐⭐⭐⭐</span></div>
+    <div class="review"><span>Profesioniști și de încredere</span><span>⭐⭐⭐⭐⭐</span></div>
+    <div class="review"><span>Reparații rapide, recomand</span><span>⭐⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="faq">
+    <h2>Întrebări frecvente</h2>
+    <p><strong>Program:</strong> Luni–Vineri 09:00–17:00</p>
+    <p><strong>Oferiți vulcanizare?</strong> Da</p>
+    <p><strong>Diagnostic auto?</strong> Se stabilește la fața locului</p>
   </div>
 </section>
 
-<a class="whatsapp" href="https://wa.me/40732802654" target="_blank">💬 WhatsApp</a>
+<a class="whatsapp-float" href="https://wa.me/40732802654" target="_blank">Scrie-ne pe WhatsApp</a>
 
 <footer>
-  <p>© 2026 Service Auto Mașini Rulate Brad</p>
+  © 2026 Service Auto Mașini Rulate Brad
 </footer>
 
 <script>
@@ -140,10 +194,10 @@ function updateStatus() {
 
   if (day >= 1 && day <= 5 && hour >= 9 && hour < 17) {
     status.textContent = '🟢 Deschis acum';
-    status.style.color = '#4CAF50';
+    status.style.color = '#2ecc71';
   } else {
-    status.textContent = '🔴 Închis acum';
-    status.style.color = '#FF5252';
+    status.textContent = '🔴 Închis acum (Luni–Vineri 09:00–17:00)';
+    status.style.color = '#e53935';
   }
 }
 updateStatus();
