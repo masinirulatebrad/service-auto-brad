@@ -1,233 +1,153 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Service Auto Mașini Rulate Brad | Reparații Auto, Vulcanizare, Spălătorie</title>
-  <meta name="description" content="Service auto în Brad – reparații auto profesionale, vulcanizare, spălătorie auto și vânzare mașini rulate. Strada Vânătorilor, Brad. Telefon 0732802654." />
-  <meta name="keywords" content="service auto Brad, vulcanizare Brad, spălătorie auto Brad, reparații auto Brad, mașini rulate Brad" />
+  <title>Service Auto Mașini Rulate Brad | Reparații Auto, Vulcanizare</title>
+  <meta name="description" content="Service auto în Brad – reparații auto profesionale, vulcanizare, spălătorie auto și vânzare mașini rulate. Telefon 0732802654.">
 
-  <meta property="og:title" content="Service Auto Mașini Rulate Brad" />
-  <meta property="og:description" content="Reparații auto profesionale, vulcanizare, spălătorie auto și vânzare mașini rulate în Brad." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://masinirulatebrad.github.io/service-auto-brad/" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #f5f7fa, #e3e9f0);
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header img {
+      max-width: 220px;
+      margin-bottom: 15px;
+      animation: fadeInDown 1s ease;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .status {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .cta {
+      margin-top: 20px;
+    }
+    .cta a {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .call { background: #e53935; }
+    .fb { background: #1877f2; }
+    .map { background: #43a047; }
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "Service Auto Mașini Rulate Brad",
-    "image": "https://masinirulatebrad.github.io/service-auto-brad/",
-    "telephone": "0732802654",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Strada Vânătorilor",
-      "addressLocality": "Brad",
-      "postalCode": "335200",
-      "addressCountry": "RO"
-    },
-    "openingHours": "Mo-Fr 09:00-17:00",
-    "url": "https://masinirulatebrad.github.io/service-auto-brad/"
-  }
-  </script>
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px 22px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: pulse 2s infinite;
+      z-index: 1000;
+    }
+    footer {
+      background: #1e3c72;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-  <div class="logo">
-    <img src="logo.png" alt="Service Auto Mașini Rulate Brad" />
-  </div>
+<header>
+  <img src="logo.png" alt="Service Auto Mașini Rulate Brad">
   <h1>Service Auto Mașini Rulate Brad</h1>
-  <p>Ai o problemă cu mașina? Sună-ne și te ajutăm rapid.</p>
+  <p>Reparații auto profesionale • Brad</p>
+  <div class="status" id="status">⏳ Se verifică programul...</div>
 </header>
 
-<!-- Buton Sună Acum (fix jos pe mobil) -->
-<a href="tel:0732802654" style="position:fixed;bottom:90px;right:20px;background:#2e7d32;color:white;padding:15px 20px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 4px 10px rgba(0,0,0,0.3);z-index:1000;">📞 Sună acum</a>
+<section>
+  <div class="services">
+    <div class="card">🔧 Reparații auto profesionale</div>
+    <div class="card">🛞 Vulcanizare auto</div>
+    <div class="card">🚿 Spălătorie auto</div>
+    <div class="card">🚗 Vânzare mașini rulate</div>
+  </div>
 
-<!-- Buton WhatsApp animat -->
-<a href="https://wa.me/40732802654" target="_blank" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 22px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 0 0 rgba(37,211,102, 0.7);animation:pulse 2s infinite;z-index:1000;">💬 Scrie pe WhatsApp</a>
+  <div class="cta" style="text-align:center;">
+    <a href="tel:0732802654" class="call">📞 Sună acum</a>
+    <a href="https://www.facebook.com/profile.php?id=61586676792745" class="fb" target="_blank">📘 Facebook</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Strada+Vânătorilor+Brad" class="map" target="_blank">📍 Locație</a>
+  </div>
+</section>
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #f5f7fa, #e3e9f0);
-  color: #333;
-}
-header {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-.logo img {
-  max-width: 220px;
-  margin-bottom: 15px;
-  animation: fadeInDown 1s ease;
-}
-section {
-  padding: 40px 20px;
-}
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-.card {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  font-weight: bold;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px 20px;
-  border-radius: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  animation: pulse 2s infinite;
-}
-footer {
-  background: #1e3c72;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-</style>
+<a class="whatsapp" href="https://wa.me/40732802654" target="_blank">💬 WhatsApp</a>
 
-  <section>
-    <h2>Program de Lucru</h2>
-    <div class="about" style="text-align:center; font-size:1.1rem;">
-      <p><strong>Luni – Vineri:</strong> 09:00 – 17:00</p>
-      <p><strong>Sâmbătă:</strong> Închis</p>
-      <p><strong>Duminică:</strong> Închis</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Serviciile Noastre</h2>
-    <div class="services">
-      <div class="card"><h3>🔧 Reparații Auto</h3><p>Mecanică generală, frâne, distribuție, ambreiaj, suspensii.</p></div>
-      <div class="card"><h3>🛢️ Schimb Ulei & Revizii</h3><p>Întreținere periodică și consumabile de calitate.</p></div>
-      <div class="card"><h3>🛞 Vulcanizare</h3><p>Schimb, echilibrare și reparații anvelope.</p></div>
-      <div class="card"><h3>🚿 Spălătorie Auto</h3><p>Curățare interior & exterior.</p></div>
-      <div class="card"><h3>🚗 Vânzare Mașini Rulate</h3><p>Autoturisme verificate și pregătite pentru drum.</p></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>De ce să ne alegi?</h2>
-    <div class="services">
-      <div class="card">✔ Experiență și profesionalism</div>
-      <div class="card">✔ Prețuri corecte și transparente</div>
-      <div class="card">✔ Lucrări rapide și sigure</div>
-      <div class="card">✔ Încredere și seriozitate</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Ce spun clienții noștri</h2>
-    <div class="services">
-      <div class="card">⭐⭐⭐⭐⭐<br>„Servicii rapide și corecte. Recomand!”</div>
-      <div class="card">⭐⭐⭐⭐⭐<br>„Personal serios, prețuri bune.”</div>
-      <div class="card">⭐⭐⭐⭐⭐<br>„Foarte mulțumit, revin cu încredere.”</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Întrebări frecvente</h2>
-    <div class="about">
-      <p><strong>Lucrăm fără programare?</strong><br>Da, în funcție de disponibilitate.</p>
-      <p><strong>Ce tipuri de mașini reparați?</strong><br>Majoritatea autoturismelor.</p>
-      <p><strong>Acceptați plata cash?</strong><br>Da.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Programare Rapidă</h2>
-    <div class="about">
-      <form>
-        <p><input type="text" placeholder="Nume" style="width:100%;padding:10px;margin-bottom:10px;"></p>
-        <p><input type="tel" placeholder="Telefon" style="width:100%;padding:10px;margin-bottom:10px;"></p>
-        <p><textarea placeholder="Mesaj / problemă" style="width:100%;padding:10px;height:100px;"></textarea></p>
-        <p><em>Sună-ne direct pentru programare rapidă.</em></p>
-      </form>
-    </div>
-  </section>
-
-  <section>
-    <h2>Despre Noi</h2>
-    <div class="about">
-      <p>
-        Service Auto Mașini Rulate Brad este un service auto dedicat calității și satisfacției clienților.
-        Oferim servicii auto complete, de la reparații profesionale și vulcanizare, până la spălătorie auto
-        și vânzare de mașini rulate atent verificate.
-      </p>
-      <p>
-        Lucrăm cu seriozitate, transparență și respect, pentru ca mașina ta să fie mereu în siguranță.
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Unde ne găsești</h2>
-    <div class="about">
-      <iframe 
-        src="https://www.google.com/maps?q=Strada+V%C3%A2n%C4%83torilor,+Brad+335200&output=embed" 
-        width="100%" 
-        height="350" 
-        style="border:0;border-radius:10px;" 
-        allowfullscreen="" 
-        loading="lazy">
-      </iframe>
-    </div>
-  </section>
-
-  <footer>
-    <p><strong>Service Auto Mașini Rulate Brad</strong></p>
-    <p>📍 Strada Vânătorilor, Brad 335200</p>
-    <p>📞 0732802654 | WhatsApp & Telefon</p>
-    <p>🕒 Luni–Vineri 09:00–17:00</p>
-    <p>© 2026 Toate drepturile rezervate</p>
-  </footer>
+<footer>
+  <p>© 2026 Service Auto Mașini Rulate Brad</p>
+</footer>
 
 <script>
 function updateStatus() {
   const now = new Date();
   const day = now.getDay();
   const hour = now.getHours();
-  const statusEl = document.getElementById('status');
+  const status = document.getElementById('status');
 
   if (day >= 1 && day <= 5 && hour >= 9 && hour < 17) {
-    statusEl.textContent = '🟢 Deschis acum';
-    statusEl.style.color = '#4CAF50';
+    status.textContent = '🟢 Deschis acum';
+    status.style.color = '#4CAF50';
   } else {
-    statusEl.textContent = '🔴 Închis acum';
-    statusEl.style.color = '#FF5252';
+    status.textContent = '🔴 Închis acum';
+    status.style.color = '#FF5252';
   }
 }
 updateStatus();
 </script>
+
 </body>
 </html>
