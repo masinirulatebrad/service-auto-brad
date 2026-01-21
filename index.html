@@ -35,16 +35,12 @@
 <body>
 
   <header>
-    <h1>Service Auto Mașini Rulate Brad</h1>
-    <p><strong>Ai o problemă cu mașina?</strong> Sună-ne și te ajutăm rapid.</p>
-    <p style="margin-top:10px;font-weight:bold;color:#a5ffb0;"><span id="status">⏳ Se verifică programul...</span> (Luni–Vineri 09:00–17:00)</p>
-    <div class="contact">📞 Telefon & WhatsApp: 0732802654<br><br>
-      <a href="tel:0732802654" style="background:#2e7d32;color:white;padding:10px 15px;border-radius:6px;text-decoration:none;margin:5px;display:inline-block;">📞 Sună acum</a>
-      <a href="https://wa.me/40732802654" target="_blank" style="background:#25D366;color:white;padding:10px 15px;border-radius:6px;text-decoration:none;margin:5px;display:inline-block;">💬 WhatsApp</a>
-      <a href="https://www.facebook.com/profile.php?id=61586676792745" target="_blank" style="background:#1877F2;color:white;padding:10px 15px;border-radius:6px;text-decoration:none;margin:5px;display:inline-block;">📘 Facebook</a>
-      <a href="https://www.google.com/maps/search/?api=1&query=Strada+V%C3%A2n%C4%83torilor,+Brad+335200" target="_blank" style="background:#d32f2f;color:white;padding:10px 15px;border-radius:6px;text-decoration:none;margin:5px;display:inline-block;">📍 Navighează</a>
-    </div>
-  </header>
+  <div class="logo">
+    <img src="logo.png" alt="Service Auto Mașini Rulate Brad" />
+  </div>
+  <h1>Service Auto Mașini Rulate Brad</h1>
+  <p>Ai o problemă cu mașina? Sună-ne și te ajutăm rapid.</p>
+</header>
 
 <!-- Buton Sună Acum (fix jos pe mobil) -->
 <a href="tel:0732802654" style="position:fixed;bottom:90px;right:20px;background:#2e7d32;color:white;padding:15px 20px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 4px 10px rgba(0,0,0,0.3);z-index:1000;">📞 Sună acum</a>
@@ -62,8 +58,13 @@ body {
 header {
   background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: white;
-  padding: 30px 20px;
+  padding: 40px 20px;
   text-align: center;
+}
+.logo img {
+  max-width: 220px;
+  margin-bottom: 15px;
+  animation: fadeInDown 1s ease;
 }
 section {
   padding: 40px 20px;
@@ -74,19 +75,44 @@ section {
   gap: 20px;
 }
 .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
   background: white;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: pulse 2s infinite;
 }
 footer {
   background: #1e3c72;
   color: white;
   text-align: center;
   padding: 20px;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 </style>
 
