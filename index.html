@@ -37,7 +37,7 @@
   <header>
     <h1>Service Auto Mașini Rulate Brad</h1>
     <p><strong>Ai o problemă cu mașina?</strong> Sună-ne și te ajutăm rapid.</p>
-    <p style="margin-top:10px;font-weight:bold;color:#a5ffb0;">🟢 Deschis acum (Luni–Vineri 09:00–17:00)</p>
+    <p style="margin-top:10px;font-weight:bold;color:#a5ffb0;"><span id="status">⏳ Se verifică programul...</span> (Luni–Vineri 09:00–17:00)</p>
     <div class="contact">📞 Telefon & WhatsApp: 0732802654<br><br>
       <a href="tel:0732802654" style="background:#2e7d32;color:white;padding:10px 15px;border-radius:6px;text-decoration:none;margin:5px;display:inline-block;">📞 Sună acum</a>
       <a href="https://wa.me/40732802654" target="_blank" style="background:#25D366;color:white;padding:10px 15px;border-radius:6px;text-decoration:none;margin:5px;display:inline-block;">💬 WhatsApp</a>
@@ -53,10 +53,40 @@
 <a href="https://wa.me/40732802654" target="_blank" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 22px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 0 0 rgba(37,211,102, 0.7);animation:pulse 2s infinite;z-index:1000;">💬 Scrie pe WhatsApp</a>
 
 <style>
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(37,211,102, 0.7); }
-  70% { box-shadow: 0 0 0 20px rgba(37,211,102, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(37,211,102, 0); }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #f5f7fa, #e3e9f0);
+  color: #333;
+}
+header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+section {
+  padding: 40px 20px;
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+footer {
+  background: #1e3c72;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 </style>
 
@@ -156,5 +186,22 @@
     <p>© 2026 Toate drepturile rezervate</p>
   </footer>
 
+<script>
+function updateStatus() {
+  const now = new Date();
+  const day = now.getDay();
+  const hour = now.getHours();
+  const statusEl = document.getElementById('status');
+
+  if (day >= 1 && day <= 5 && hour >= 9 && hour < 17) {
+    statusEl.textContent = '🟢 Deschis acum';
+    statusEl.style.color = '#4CAF50';
+  } else {
+    statusEl.textContent = '🔴 Închis acum';
+    statusEl.style.color = '#FF5252';
+  }
+}
+updateStatus();
+</script>
 </body>
 </html>
