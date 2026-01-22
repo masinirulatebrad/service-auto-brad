@@ -5,167 +5,137 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Service Auto Mașini Rulate Brad</title>
 
+<meta name="description" content="Service auto Brad – reparații profesionale, diagnoză, vulcanizare, spălătorie auto. Sună sau programează-te pe WhatsApp.">
+<meta name="keywords" content="service auto Brad, reparații auto, vulcanizare, diagnoză auto">
+<meta name="author" content="Service Auto Brad">
+
 <style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(180deg, #0b4ea2, #eaf2ff);
-  color: #033;
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(#f4f8ff,#e6f0ff);
+    color:#123;
+}
+header{
+    background:linear-gradient(135deg,#0a3d91,#0f5fd6);
+    color:white;
+    text-align:center;
+    padding:40px 15px;
+}
+header h1{margin:0;font-size:32px;}
+header p{font-size:18px;}
+
+.status{
+    margin-top:15px;
+    font-weight:bold;
+    font-size:18px;
+}
+.open{color:#2ecc71;}
+.closed{color:#e74c3c;}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin:25px 0;
+}
+.btn{
+    padding:15px 22px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+    animation:pulse 2s infinite;
+}
+.call{background:#27ae60;}
+.whatsapp{background:#25d366;}
+.facebook{background:#1877f2;}
+.maps{background:#e74c3c;}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+    100%{transform:scale(1);}
 }
 
-/* HEADER */
-header {
-  text-align: center;
-  padding: 40px 20px;
-  color: #fff;
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:30px 15px;
 }
 
-header h1 {
-  font-size: 34px;
-  margin-bottom: 10px;
+.services, .reviews, .faq{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
-header p {
-  font-size: 20px;
+.services ul{
+    list-style:none;
+    padding:0;
+}
+.services li{
+    padding:8px 0;
+    font-size:17px;
 }
 
-/* STATUS */
-.status {
-  margin-top: 20px;
-  font-size: 18px;
+.review{
+    border-bottom:1px solid #ddd;
+    padding:10px 0;
 }
-.status .closed {
-  color: #ff4d4d;
-  font-weight: bold;
-}
+.review:last-child{border:none;}
 
-/* MAIN BUTTONS */
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin: 30px 0;
-  flex-wrap: wrap;
+iframe{
+    width:100%;
+    height:350px;
+    border:0;
+    border-radius:15px;
 }
 
-.btn {
-  padding: 15px 25px;
-  border-radius: 35px;
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
-  font-weight: bold;
+/* WhatsApp flotant dreapta */
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    font-weight:bold;
+    text-decoration:none;
+    animation:pulse 2s infinite;
+    z-index:1000;
 }
 
-.call { background: #28a745; }
-.fb { background: #1877f2; }
-.map { background: #e63946; }
-
-/* CONTENT */
-section {
-  max-width: 900px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* FIXED WHATSAPP */
-.whatsapp-fixed {
-  position: fixed;
-  left: 15px;
-  bottom: 50%;
-  transform: translateY(50%);
-  background: #25D366;
-  color: #fff;
-  padding: 15px 20px;
-  border-radius: 50px;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 0 20px rgba(37,211,102,0.8);
-  animation: pulse 1.8s infinite;
-  z-index: 999;
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
-  70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
-  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
-}
-
-/* REVIEWS */
-.reviews {
-  background: #f4f8ff;
-  padding: 20px;
-  border-radius: 12px;
-  margin-top: 20px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #fff;
-  margin-top: 40px;
+/* Programare stânga */
+.programare-left{
+    position:fixed;
+    top:40%;
+    left:0;
+    background:#25d366;
+    color:white;
+    padding:15px;
+    border-radius:0 10px 10px 0;
+    font-weight:bold;
+    text-decoration:none;
+    animation:pulse 2s infinite;
+    z-index:1000;
 }
 </style>
 </head>
 
 <body>
 
-<!-- WHATSAPP FIXED -->
-<a class="whatsapp-fixed"
-href="https://wa.me/40732802654?text=Buna%20ziua,%20doresc%20o%20programare%20la%20service%20auto.%0AMasina:%0AProblema:%0AData%20dorita:"
-target="_blank">
-📅 Programare WhatsApp
-</a>
-
 <header>
-  <h1>Service Auto Mașini Rulate Brad</h1>
-  <p>Reparații auto • Vulcanizare • Spălătorie • Mașini rulate</p>
-
-  <div class="status">
-    🔴 <span class="closed">Închis acum</span> (Luni–Vineri 09:00–17:00)
-  </div>
+<h1>Service Auto Mașini Rulate Brad</h1>
+<p>Reparații rapide și profesionale</p>
+<div id="status" class="status"></div>
 </header>
 
 <div class="buttons">
-  <a href="tel:0732802654" class="btn call">📞 Sună acum</a>
-  <a href="https://www.facebook.com/profile.php?id=61586676792745" class="btn fb" target="_blank">Facebook</a>
-  <a href="https://www.google.com/maps/search/?api=1&query=Strada+Vânătorilor,+Brad+335200" class="btn map" target="_blank">📍 Navighează</a>
-</div>
-
-<section>
-  <h2>Program de lucru</h2>
-  <p>
-    🕘 Luni–Vineri: <strong>09:00 – 17:00</strong><br>
-    ❌ Sâmbătă – Duminică: Închis
-  </p>
-
-  <h2>Unde ne găsești</h2>
-  <p>📍 Strada Vânătorilor, Brad 335200</p>
-
-  <iframe 
-    src="https://www.google.com/maps?q=Strada%20Vânătorilor,%20Brad%20335200&output=embed"
-    width="100%" 
-    height="300" 
-    style="border:0; border-radius:12px;"
-    loading="lazy">
-  </iframe>
-
-  <h2>Ce spun clienții</h2>
-  <div class="reviews">
-    <p>⭐⭐⭐⭐⭐<br>„Servicii rapide și profesionale. Recomand cu încredere!”<br><strong>— Mihai P.</strong></p>
-    <p>⭐⭐⭐⭐⭐<br>„Prețuri corecte și oameni serioși.”<br><strong>— Ana T.</strong></p>
-    <p>⭐⭐⭐⭐⭐<br>„Cel mai bun service auto din Brad.”<br><strong>— George D.</strong></p>
-  </div>
-</section>
-
-<footer>
-  © 2026 Service Auto Mașini Rulate Brad
-</footer>
-
-</body>
-</html>
+<a class="btn call" href="tel:0732802654">📞 Sună acum</a>
+<a class="btn whatsapp" href="https://wa.me/40732802654">💬 Wha
