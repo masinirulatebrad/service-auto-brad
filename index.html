@@ -5,25 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Service Auto Mașini Rulate Brad</title>
 
-<meta name="description" content="Service auto Brad – reparații profesionale, diagnoză, vulcanizare, spălătorie auto. Sună sau programează-te pe WhatsApp.">
-<meta name="keywords" content="service auto Brad, reparații auto, vulcanizare, diagnoză auto">
+<meta name="description" content="Service auto Brad – reparații auto profesionale, diagnoză, vulcanizare, spălătorie auto, mașini rulate.">
+<meta name="keywords" content="service auto Brad, reparatii auto, vulcanizare, diagnoza auto, spalatorie auto">
 <meta name="author" content="Service Auto Brad">
 
 <style>
 body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
-    background:linear-gradient(#f4f8ff,#e6f0ff);
-    color:#123;
+    background:linear-gradient(#eef4ff,#dfeaff);
+    color:#102030;
 }
+
+/* HEADER */
 header{
     background:linear-gradient(135deg,#0a3d91,#0f5fd6);
     color:white;
     text-align:center;
-    padding:40px 15px;
+    padding:45px 15px;
 }
-header h1{margin:0;font-size:32px;}
-header p{font-size:18px;}
+header h1{margin:0;font-size:34px;}
+header p{font-size:18px;margin-top:8px;}
 
 .status{
     margin-top:15px;
@@ -31,8 +33,9 @@ header p{font-size:18px;}
     font-size:18px;
 }
 .open{color:#2ecc71;}
-.closed{color:#e74c3c;}
+.closed{color:#ff4d4d;}
 
+/* BUTOANE SUS */
 .buttons{
     display:flex;
     justify-content:center;
@@ -42,88 +45,112 @@ header p{font-size:18px;}
 }
 .btn{
     padding:15px 22px;
-    border-radius:10px;
+    border-radius:12px;
     text-decoration:none;
     color:white;
     font-weight:bold;
-    box-shadow:0 4px 10px rgba(0,0,0,.2);
+    box-shadow:0 6px 15px rgba(0,0,0,.25);
     animation:pulse 2s infinite;
 }
-.call{background:#27ae60;}
+.call{background:#2ecc71;}
 .whatsapp{background:#25d366;}
 .facebook{background:#1877f2;}
 .maps{background:#e74c3c;}
 
+/* ANIMATIE */
 @keyframes pulse{
     0%{transform:scale(1);}
-    50%{transform:scale(1.05);}
+    50%{transform:scale(1.06);}
     100%{transform:scale(1);}
 }
 
+/* SECTIUNI */
 section{
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
     padding:30px 15px;
 }
-
-.services, .reviews, .faq{
+.card{
     background:white;
+    border-radius:18px;
+    padding:30px;
+    margin-bottom:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+/* SERVICII */
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+.service-box{
+    background:#f3f7ff;
     border-radius:15px;
-    padding:25px;
-    margin-bottom:30px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    padding:20px;
+    text-align:center;
+    font-weight:bold;
+    box-shadow:0 6px 15px rgba(0,0,0,.1);
 }
 
-.services ul{
-    list-style:none;
-    padding:0;
-}
-.services li{
-    padding:8px 0;
-    font-size:17px;
-}
-
+/* REVIEW */
 .review{
     border-bottom:1px solid #ddd;
-    padding:10px 0;
+    padding:12px 0;
 }
 .review:last-child{border:none;}
 
+/* MAPS */
 iframe{
     width:100%;
-    height:350px;
+    height:360px;
     border:0;
-    border-radius:15px;
+    border-radius:18px;
 }
 
-/* WhatsApp flotant dreapta */
+/* WHATSAPP DREAPTA */
 .whatsapp-float{
     position:fixed;
     bottom:20px;
     right:20px;
     background:#25d366;
     color:white;
-    padding:15px 20px;
+    padding:15px 22px;
     border-radius:50px;
     font-weight:bold;
     text-decoration:none;
     animation:pulse 2s infinite;
-    z-index:1000;
+    z-index:999;
 }
 
-/* Programare stânga */
+/* SUNA ACUM FLOTANT */
+.call-float{
+    position:fixed;
+    bottom:80px;
+    right:20px;
+    background:#2ecc71;
+    color:white;
+    padding:15px 22px;
+    border-radius:50px;
+    font-weight:bold;
+    text-decoration:none;
+    animation:pulse 2s infinite;
+    z-index:999;
+}
+
+/* PROGRAMARE STANGA */
 .programare-left{
     position:fixed;
     top:40%;
     left:0;
     background:#25d366;
     color:white;
-    padding:15px;
-    border-radius:0 10px 10px 0;
+    padding:16px;
+    border-radius:0 12px 12px 0;
     font-weight:bold;
     text-decoration:none;
     animation:pulse 2s infinite;
-    z-index:1000;
+    z-index:999;
 }
 </style>
 </head>
@@ -132,7 +159,7 @@ iframe{
 
 <header>
 <h1>Service Auto Mașini Rulate Brad</h1>
-<p>Reparații rapide și profesionale</p>
+<p>Reparații auto profesionale • Rapid • De încredere</p>
 <div id="status" class="status"></div>
 </header>
 
@@ -143,30 +170,33 @@ iframe{
 <a class="btn maps" href="https://maps.google.com/?q=Strada+Vânătorilor+Brad">Navighează</a>
 </div>
 
-<section class="services">
+<section class="card">
 <h2>🔧 Serviciile noastre</h2>
-<ul>
-<li>✔ Reparații mecanice profesionale</li>
-<li>✔ Diagnoză auto computerizată</li>
-<li>✔ Vulcanizare auto</li>
-<li>✔ Spălătorie auto</li>
-<li>✔ Vânzare mașini rulate</li>
-</ul>
+<div class="services-grid">
+<div class="service-box">Reparații mecanice auto</div>
+<div class="service-box">Diagnoză auto computerizată</div>
+<div class="service-box">Electrică auto</div>
+<div class="service-box">Vulcanizare auto</div>
+<div class="service-box">Spălătorie auto</div>
+<div class="service-box">Revizii și verificări auto</div>
+<div class="service-box">Vânzare mașini rulate</div>
+</div>
 </section>
 
-<section class="reviews">
+<section class="card">
 <h2>⭐ Ce spun clienții</h2>
-<div class="review">„Profesioniști și de încredere!” – Ana T.</div>
-<div class="review">„Reparații rapide, recomand!” – George D.</div>
-<div class="review">„Foarte mulțumit de servicii.” – Mihai P.</div>
+<div class="review">⭐⭐⭐⭐⭐ „Foarte mulțumit de servicii!” – Mihai P.</div>
+<div class="review">⭐⭐⭐⭐⭐ „Profesioniști și de încredere.” – Ana T.</div>
+<div class="review">⭐⭐⭐⭐⭐ „Reparații rapide, recomand!” – George D.</div>
 </section>
 
-<section>
+<section class="card">
 <h2>📍 Locația noastră</h2>
 <iframe src="https://www.google.com/maps?q=Strada%20Vânătorilor%20Brad&output=embed"></iframe>
 </section>
 
 <a class="whatsapp-float" href="https://wa.me/40732802654">Scrie pe WhatsApp</a>
+<a class="call-float" href="tel:0732802654">Sună acum</a>
 <a class="programare-left" href="https://wa.me/40732802654">📅 Programare</a>
 
 <script>
