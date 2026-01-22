@@ -6,117 +6,166 @@
 <title>Service Auto Mașini Rulate Brad</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#f2f4f8;color:#1b1b1b}
-header{background:linear-gradient(135deg,#0f2a44,#1b4f8c);color:#fff;padding:70px 20px;text-align:center;border-bottom:6px solid #d32f2f}
-h1{font-size:36px;margin:0;font-weight:900}
-header p{font-size:20px;margin-top:10px}
-.status{margin-top:20px;font-size:18px;font-weight:bold}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #0b4ea2, #eaf2ff);
+  color: #033;
+}
 
-section{max-width:1100px;margin:auto;padding:40px 20px}
-h2{text-align:center;margin-bottom:30px;color:#0f2a44}
+/* HEADER */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  color: #fff;
+}
 
-.buttons{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-bottom:40px}
-.btn{padding:16px 28px;border-radius:14px;font-weight:bold;color:white;text-decoration:none;font-size:16px;box-shadow:0 8px 20px rgba(0,0,0,.25)}
-.call{background:#d32f2f}
-.whatsapp{background:#25D366}
-.facebook{background:#1877f2}
-.maps{background:#b71c1c}
+header h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
 
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
-.card{background:#fff;border-radius:18px;padding:28px;text-align:center;font-size:18px;font-weight:bold;border-bottom:5px solid #d32f2f;box-shadow:0 10px 25px rgba(0,0,0,.15)}
+header p {
+  font-size: 20px;
+}
 
-.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.review{background:#fff;padding:20px;border-radius:14px;box-shadow:0 6px 15px rgba(0,0,0,.15)}
+/* STATUS */
+.status {
+  margin-top: 20px;
+  font-size: 18px;
+}
+.status .closed {
+  color: #ff4d4d;
+  font-weight: bold;
+}
 
-.form{max-width:500px;margin:auto;background:#fff;padding:30px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.15)}
-.form input,.form textarea{width:100%;padding:12px;margin-bottom:15px;border-radius:10px;border:1px solid #ccc}
-.form button{width:100%;padding:14px;background:#d32f2f;color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:bold}
+/* MAIN BUTTONS */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
 
-iframe{width:100%;height:350px;border:0;border-radius:18px}
+.btn {
+  padding: 15px 25px;
+  border-radius: 35px;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-footer{background:#0f2a44;color:white;text-align:center;padding:22px;border-top:5px solid #d32f2f}
+.call { background: #28a745; }
+.fb { background: #1877f2; }
+.map { background: #e63946; }
 
-.float{position:fixed;right:20px;padding:16px 26px;border-radius:50px;font-weight:bold;color:white;text-decoration:none;box-shadow:0 10px 25px rgba(0,0,0,.35);animation:pulse 2s infinite;z-index:999}
-.float.call{bottom:90px;background:#d32f2f}
-.float.whatsapp{bottom:20px;background:#25D366}
+/* CONTENT */
+section {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
 
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+/* FIXED WHATSAPP */
+.whatsapp-fixed {
+  position: fixed;
+  left: 15px;
+  bottom: 50%;
+  transform: translateY(50%);
+  background: #25D366;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(37,211,102,0.8);
+  animation: pulse 1.8s infinite;
+  z-index: 999;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+/* REVIEWS */
+.reviews {
+  background: #f4f8ff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  margin-top: 40px;
+}
 </style>
 </head>
 
 <body>
 
+<!-- WHATSAPP FIXED -->
+<a class="whatsapp-fixed"
+href="https://wa.me/40732802654?text=Buna%20ziua,%20doresc%20o%20programare%20la%20service%20auto.%0AMasina:%0AProblema:%0AData%20dorita:"
+target="_blank">
+📅 Programare WhatsApp
+</a>
+
 <header>
-<h1>Service Auto Mașini Rulate Brad</h1>
-<p>Reparații profesionale • Vulcanizare • Spălătorie • Vânzări auto</p>
-<div class="status" id="status">⏳ Se verifică programul...</div>
+  <h1>Service Auto Mașini Rulate Brad</h1>
+  <p>Reparații auto • Vulcanizare • Spălătorie • Mașini rulate</p>
+
+  <div class="status">
+    🔴 <span class="closed">Închis acum</span> (Luni–Vineri 09:00–17:00)
+  </div>
 </header>
 
-<section>
 <div class="buttons">
-<a href="tel:0732802654" class="btn call">📞 Sună acum</a>
-<a href="https://wa.me/40732802654" class="btn whatsapp">💬 WhatsApp</a>
-<a href="https://www.facebook.com/profile.php?id=61586676792745" class="btn facebook">📘 Facebook</a>
-<a href="https://www.google.com/maps/place/Strada+Vânătorilor,+Brad+335200" class="btn maps">📍 Locație</a>
+  <a href="tel:0732802654" class="btn call">📞 Sună acum</a>
+  <a href="https://www.facebook.com/profile.php?id=61586676792745" class="btn fb" target="_blank">Facebook</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Strada+Vânătorilor,+Brad+335200" class="btn map" target="_blank">📍 Navighează</a>
 </div>
-
-<div class="cards">
-<div class="card">🔧 Reparații auto</div>
-<div class="card">🛞 Vulcanizare</div>
-<div class="card">🚿 Spălătorie auto</div>
-<div class="card">🚗 Vânzare mașini rulate</div>
-</div>
-</section>
 
 <section>
-<h2>⭐ Ce spun clienții</h2>
-<div class="reviews">
-<div class="review">„Servicii rapide și profesionale. Recomand!”</div>
-<div class="review">„Personal de încredere, prețuri corecte.”</div>
-<div class="review">„Cel mai bun service auto din Brad.”</div>
-</div>
-</section>
+  <h2>Program de lucru</h2>
+  <p>
+    🕘 Luni–Vineri: <strong>09:00 – 17:00</strong><br>
+    ❌ Sâmbătă – Duminică: Închis
+  </p>
 
-<section>
-<h2>📅 Programare online</h2>
-<div class="form">
-<input type="text" placeholder="Nume">
-<input type="tel" placeholder="Telefon">
-<textarea placeholder="Mesaj / problemă auto"></textarea>
-<button>Trimite cererea</button>
-<p style="font-size:12px;text-align:center;">*Veți fi contactat telefonic</p>
-</div>
-</section>
+  <h2>Unde ne găsești</h2>
+  <p>📍 Strada Vânătorilor, Brad 335200</p>
 
-<section>
-<h2>📍 Locația noastră</h2>
-<iframe 
-src="https://www.google.com/maps?q=Strada%20Vânătorilor%20Brad%20335200&output=embed">
-</iframe>
-</section>
+  <iframe 
+    src="https://www.google.com/maps?q=Strada%20Vânătorilor,%20Brad%20335200&output=embed"
+    width="100%" 
+    height="300" 
+    style="border:0; border-radius:12px;"
+    loading="lazy">
+  </iframe>
 
-<a href="tel:0732802654" class="float call">📞 Sună acum</a>
-<a href="https://wa.me/40732802654" class="float whatsapp">💬 WhatsApp</a>
+  <h2>Ce spun clienții</h2>
+  <div class="reviews">
+    <p>⭐⭐⭐⭐⭐<br>„Servicii rapide și profesionale. Recomand cu încredere!”<br><strong>— Mihai P.</strong></p>
+    <p>⭐⭐⭐⭐⭐<br>„Prețuri corecte și oameni serioși.”<br><strong>— Ana T.</strong></p>
+    <p>⭐⭐⭐⭐⭐<br>„Cel mai bun service auto din Brad.”<br><strong>— George D.</strong></p>
+  </div>
+</section>
 
 <footer>
-© 2026 Service Auto Mașini Rulate Brad
+  © 2026 Service Auto Mașini Rulate Brad
 </footer>
-
-<script>
-function updateStatus(){
-const now=new Date();
-const day=now.getDay();
-const hour=now.getHours();
-const status=document.getElementById("status");
-if(day>=1&&day<=5&&hour>=9&&hour<17){
-status.textContent="🟢 Deschis acum";
-status.style.color="#2ecc71";
-}else{
-status.textContent="🔴 Închis acum (L–V 09:00–17:00)";
-status.style.color="#ff5252";
-}}
-updateStatus();
-</script>
 
 </body>
 </html>
