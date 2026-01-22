@@ -138,4 +138,51 @@ iframe{
 
 <div class="buttons">
 <a class="btn call" href="tel:0732802654">📞 Sună acum</a>
-<a class="btn whatsapp" href="https://wa.me/40732802654">💬 Wha
+<a class="btn whatsapp" href="https://wa.me/40732802654">💬 WhatsApp</a>
+<a class="btn facebook" href="https://www.facebook.com/profile.php?id=61586676792745">Facebook</a>
+<a class="btn maps" href="https://maps.google.com/?q=Strada+Vânătorilor+Brad">Navighează</a>
+</div>
+
+<section class="services">
+<h2>🔧 Serviciile noastre</h2>
+<ul>
+<li>✔ Reparații mecanice profesionale</li>
+<li>✔ Diagnoză auto computerizată</li>
+<li>✔ Vulcanizare auto</li>
+<li>✔ Spălătorie auto</li>
+<li>✔ Vânzare mașini rulate</li>
+</ul>
+</section>
+
+<section class="reviews">
+<h2>⭐ Ce spun clienții</h2>
+<div class="review">„Profesioniști și de încredere!” – Ana T.</div>
+<div class="review">„Reparații rapide, recomand!” – George D.</div>
+<div class="review">„Foarte mulțumit de servicii.” – Mihai P.</div>
+</section>
+
+<section>
+<h2>📍 Locația noastră</h2>
+<iframe src="https://www.google.com/maps?q=Strada%20Vânătorilor%20Brad&output=embed"></iframe>
+</section>
+
+<a class="whatsapp-float" href="https://wa.me/40732802654">Scrie pe WhatsApp</a>
+<a class="programare-left" href="https://wa.me/40732802654">📅 Programare</a>
+
+<script>
+const statusDiv=document.getElementById("status");
+const now=new Date();
+const day=now.getDay();
+const hour=now.getHours();
+
+if(day>=1 && day<=5 && hour>=9 && hour<17){
+    statusDiv.innerHTML="🟢 Deschis acum";
+    statusDiv.className="status open";
+}else{
+    statusDiv.innerHTML="🔴 Închis (Luni–Vineri 09:00–17:00)";
+    statusDiv.className="status closed";
+}
+</script>
+
+</body>
+</html>
